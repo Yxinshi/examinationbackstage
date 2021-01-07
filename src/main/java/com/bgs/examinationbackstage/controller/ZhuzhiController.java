@@ -195,7 +195,7 @@ public class ZhuzhiController {
         return null;
     }
     /**
-     * 图片上传
+     * 图片上传  于新世测试
      * */
     public  Map<String,String>  imageUpload(MultipartFile picture) throws IOException {
         String filename = picture.getOriginalFilename();

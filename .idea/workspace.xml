@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64dc8fa4-4a18-4958-b6e0-a3c4715dd09a" name="Default" comment="上传" />
+    <list default="true" id="64dc8fa4-4a18-4958-b6e0-a3c4715dd09a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/ZhuzhiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/ZhuzhiController.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="H:\ideaKJInCheng\examinationbackstage\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,11 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="XiaoxiController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="XiaoxiController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/XiaoxiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+            <state relative-caret-position="870">
+              <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,11 +57,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ZhuzhiController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ZhuzhiController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/ZhuzhiController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
+            <state relative-caret-position="421">
+              <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
+              <folding>
+                <element signature="method#imageUpload#0;class#ZhuzhiController#0" />
+                <element signature="method#VideoTransmission#0;class#ZhuzhiController#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addExam.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/addExam.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="149" column="38" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -77,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/BiController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -85,7 +100,7 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="1530">
               <caret line="51" column="42" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -187,11 +202,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/service/serviceImp/QuestionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/pojo/QuestionBank.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/service/ZhuzhiService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/ZhuzhiController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/addExam.jsp" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ZhuzhiMapper.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/service/serviceImp/ZhuzhiServiceImp.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/mapper/ZhuzhiMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/ZhuzhiController.java" />
       </list>
     </option>
   </component>
@@ -286,6 +301,21 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="examinationbackstage" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="examinationbackstage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="examinationbackstage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="examinationbackstage" type="b2602c69:ProjectViewProjectNode" />
+              <item name="examinationbackstage" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsps" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -432,7 +462,7 @@
       <workItem from="1609201383795" duration="24552000" />
       <workItem from="1609287907794" duration="10917000" />
       <workItem from="1609461745300" duration="10489000" />
-      <workItem from="1610024076552" duration="522000" />
+      <workItem from="1610024076552" duration="1058000" />
     </task>
     <task id="LOCAL-00001" summary="新增实体类">
       <created>1609135830119</created>
@@ -455,18 +485,25 @@
       <option name="project" value="LOCAL" />
       <updated>1610024154229</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="上传测试">
+      <created>1610024737284</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1610024737284</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19570000" />
+    <option name="totallyTimeSpent" value="20106000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32996634" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info id="Capture Tool" order="2" />
@@ -569,7 +606,8 @@
     <MESSAGE value="新增实体类" />
     <MESSAGE value="上传" />
     <MESSAGE value="上传王五" />
-    <option name="LAST_COMMIT_MESSAGE" value="上传王五" />
+    <MESSAGE value="上传测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="上传测试" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="74" key="#Inspections" timestamp="1609157895797">
@@ -670,17 +708,6 @@
     <state x="511" y="45" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1609156026890" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/service/serviceImp/ZhuzhiServiceImp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#1353#1354#0" expanded="true" />
-            <element signature="e#1406#1407#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/mapper/ZhuzhiMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -963,13 +990,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/addExam.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="149" column="38" lean-forward="true" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ZhuzhiMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="401">
@@ -1002,6 +1022,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/BiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/MarkPaperController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -1011,7 +1038,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="1530">
           <caret line="51" column="42" selection-start-line="51" selection-start-column="38" selection-end-line="51" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1019,26 +1046,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/ZhuzhiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="123" column="7" selection-start-line="123" selection-start-column="7" selection-end-line="123" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/BiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/XiaoxiController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="870">
+          <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examinationbackstage.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsps/addExam.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="149" column="38" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/bgs/examinationbackstage/controller/ZhuzhiController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
+          <folding>
+            <element signature="method#imageUpload#0;class#ZhuzhiController#0" />
+            <element signature="method#VideoTransmission#0;class#ZhuzhiController#0" />
           </folding>
         </state>
       </provider>
