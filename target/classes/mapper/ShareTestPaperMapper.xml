@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bgs.examinationbackstage.mapper.ShareTestPaperMapper">
+
+    <!--   //查询试卷基本信息
+   List<TestPaper> selectExaminationPaper(@Param("testPaperStartTime") String testPaperStartTime,
+   @Param("testPaperEndTime")String testPaperEndTime,@Param("testPaperName")String testPaperName,
+   @Param("roleName")String roleName,@Param("content")String content);  -->
+    <select id="selectExaminationPaper" resultType="com.bgs.examinationbackstage.pojo.TestPaper">
+        select u.`name` as testPaperFounderName ,ep.test_paper_collect as testPaperCollect,ep.test_paper_like as testPaperLike,
+        ep.create_time as createTime ,ep.test_paper_name as testPaperName,r.role_name as roleName,
+        ep.test_paper_start_time as testPaperStartTime,ep.test_paper_end_time as testPaperEndTime,
+        SUM(IF(qb.question_bank_type='单选题',1,0)) danXuanTi,
+        SUM(IF(qb.question_bank_type='多选题',1,0)) duoXuanTi,
+        SUM(IF(qb.question_bank_type='判断题',1,0)) panDuanTi,
+        SUM(IF(qb.question_bank_type='填空题',1,0)) tianKongTi,
+        SUM(IF(qb.question_bank_type='简答题',1,0)) jianDaTi
+        from `user` u
+        left join  examination_paper ep on u.id = ep.test_paper_founder
+        left join  test_paper_questions tpq on ep.test_paper_id = tpq.test_paper_id
+        left join  question_bank qb on tpq.test_questions_id = qb.question_bank_id
+        LEFT JOIN  role r ON u.role_id=r.role_id
+        where 1=1
+        <if test="testPaperName!=null and testPaperName!=''">
+            and ep.test_paper_name  like '%${testPaperName}%'
+        </if>
+        <if test="roleName!=null and roleName!=''">
+            and r.role_name like '%${roleName}%'
+        </if>
+        <if test="testPaperStartTime!=null and testPaperStartTime!=''">
+            and ep.test_paper_start_time like '%${testPaperStartTime}%'
+        </if>
+        <if test="testPaperEndTime!=null and testPaperEndTime!=''">
+            and ep.test_paper_end_time like '%${testPaperEndTime}%'
+        </if>
+        GROUP BY tpq.test_paper_id
+    </select>
+
+
+</mapper>

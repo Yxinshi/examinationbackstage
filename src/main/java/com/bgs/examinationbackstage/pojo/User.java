@@ -16,7 +16,9 @@ public class User {
   private String phone;
   private Integer roleId;
 
+  private Integer totalPoints;
 
+  private Integer estimateStatus;
 
 
 
