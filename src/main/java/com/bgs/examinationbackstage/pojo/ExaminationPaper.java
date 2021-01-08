@@ -22,7 +22,15 @@ public class ExaminationPaper {
   private String testPaperByTheNumberOf;
   private String testPaperPassingRate;
   private String testPaperAverageScore;
+  private String testPaperFounder;//试卷创建人  用户id  关联
+  private boolean testPaperCollect;//收藏（收藏1，没收藏0）
+  private boolean testPaperLike;//点赞（点赞1，未点赞0）
 
+  private Integer id;
+  private String name;//姓名
+  private String jobNumber;
+  private Integer totalPoints;
+  private Integer passState;
 
 
 }

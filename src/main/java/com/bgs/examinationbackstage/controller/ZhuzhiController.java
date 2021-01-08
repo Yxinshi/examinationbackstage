@@ -253,7 +253,6 @@ public class ZhuzhiController {
     public Map<String,String> tupian(@RequestParam("file") MultipartFile[] file,@RequestParam("ces") String ces) throws IllegalStateException {
         System.out.println(file[0].getOriginalFilename());
         System.out.println(file[1].getOriginalFilename());
-
         System.out.println(ces);
         return null;
         }
