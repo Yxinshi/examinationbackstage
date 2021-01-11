@@ -17,5 +17,5 @@ public interface MarkPaperMapper {
 
     List<QuestionBank> showTestPaperById(@Param("id") Integer id);
 
-    List<ExaminationAnswer> addScore(@Param("list") ExaminationAnswer examinationAnswer);
+    int addScore(@Param("list") List<ExaminationAnswer> list);
 }

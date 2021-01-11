@@ -15,5 +15,5 @@ public interface MarkPaperService {
 
     List<QuestionBank> showTestPaperById(Integer id);
 
-    List<ExaminationAnswer> addScore(ExaminationAnswer examinationAnswer);
+   int addScore(List<ExaminationAnswer> list);
 }

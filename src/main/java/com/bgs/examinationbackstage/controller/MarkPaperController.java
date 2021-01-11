@@ -5,16 +5,16 @@ import com.bgs.examinationbackstage.pojo.*;
 import com.bgs.examinationbackstage.service.MarkPaperService;
 import com.bgs.examinationbackstage.utils.BaseResponse;
 import com.bgs.examinationbackstage.utils.StatusCode;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
@@ -80,8 +80,8 @@ public class MarkPaperController {
     @RequestMapping("showTestPaperById")
     @ResponseBody
     @ApiOperation("展示某同学试卷")
-    public List<QuestionBank> showTestPaperById(Integer id, HttpSession session){
-        //User user = (User) session.getAttribute("user");
+    public List<QuestionBank> showTestPaperById(Integer id){
+
         System.out.println(id);
         List<QuestionBank> list = markPaperService.showTestPaperById(id);
 
@@ -92,11 +92,24 @@ public class MarkPaperController {
     @ResponseBody
     @RequestMapping("/addScore")
     @ApiOperation("添加得分")
-    public BaseResponse addScore(ExaminationAnswer examinationAnswer){
-        List<ExaminationAnswer> answers = markPaperService.addScore(examinationAnswer);
-
-        return new BaseResponse(StatusCode.Success,answers);
-
+    public BaseResponse addScore(@RequestBody String plist){
+        System.out.println(plist+"11");
+        ObjectMapper objectMapper = new ObjectMapper();
+        JavaType javaType = objectMapper.getTypeFactory().constructParametricType(List.class,ExaminationAnswer.class);
+        List<ExaminationAnswer> list = null;
+        try {
+            list=objectMapper.readValue(plist,javaType);
+            int answers = markPaperService.addScore(list);
+            return new BaseResponse(StatusCode.Success,answers);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return new BaseResponse(StatusCode.Fail);
+        }
+        /*int i = markPaperService.addScore(plist);
+        if (i>0){
+            return new BaseResponse(StatusCode.Success,i);
+        }
+        return new BaseResponse(StatusCode.Fail);*/
 
     }
 

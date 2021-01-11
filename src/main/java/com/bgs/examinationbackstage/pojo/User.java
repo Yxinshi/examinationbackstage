@@ -9,16 +9,17 @@ public class User {
 
   private Integer id;
   private String name;
-  private long jobNumber;
+  private Integer jobNumber;
   private String identityUser;
-  private long accountNumber;
+  private Integer accountNumber;
   private String password;
   private String phone;
   private Integer roleId;
 
-  private Integer totalPoints;
-
+  private String totalPoints;
   private Integer estimateStatus;
+  private Integer testPaperId;
+  private Integer userId;
 
 
 

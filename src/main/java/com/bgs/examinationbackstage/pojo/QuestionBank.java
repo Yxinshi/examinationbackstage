@@ -6,6 +6,7 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
+import java.util.List;
 
 @Data
 public class QuestionBank  extends  Page{
@@ -31,6 +32,12 @@ public class QuestionBank  extends  Page{
   private String sharedState;
   private String analysis;
   private String difficulty;
+
+
+  private String answer;
+  private String score;
+
+  private List<QuestionBank> bankList;
 
 
 

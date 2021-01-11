@@ -80,7 +80,7 @@
             if (layEvent==='testDetails'){
                 window.location.href="/jsps/markPapers/testDetail.jsp?id="+data.testPaperId;
             }else if (layEvent==='outPaper'){
-
+               /* window.location.href="/jsps/markPapers/outPaper.jsp?id="+data.testPaperId;*/
             }
         })
 
@@ -114,6 +114,6 @@
 </script>
 <script type="text/html" id="testCenter_demo">
     <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="testDetails">考试详情</a>
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="outPaper">导出试卷</a>
+    <%--<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="outPaper">导出试卷</a>--%>
 </script>
 </html>

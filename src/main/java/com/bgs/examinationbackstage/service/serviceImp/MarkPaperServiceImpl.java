@@ -39,7 +39,7 @@ public class MarkPaperServiceImpl implements MarkPaperService {
     }
 
     @Override
-    public List<ExaminationAnswer> addScore(ExaminationAnswer examinationAnswer) {
-        return markPaperMapper.addScore(examinationAnswer);
+    public int addScore(List<ExaminationAnswer> list) {
+        return markPaperMapper.addScore(list);
     }
 }

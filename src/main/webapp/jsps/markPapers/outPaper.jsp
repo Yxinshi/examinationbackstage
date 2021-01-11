@@ -154,7 +154,7 @@
             text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-size: 16px;" onclick="goback()">返回
+            font-size: 16px;" id="back" onclick="goback()">返回
     </button>
 </div>
 </body>
@@ -172,13 +172,20 @@
         }
         //return result;
         showUserTestPaper(result);
+
         console.log(result)
     }
+
 
     function goback(result){
         window.location.href = "/jsps/markPapers/testDetail.jsp?id="+1;
     }
 
+
+
+    /*function goback() {
+        window.location.href = "/jsps/markPapers/testDetail.jsp"
+    }*/
 
     function showUserTestPaper(result) {
         //alert(result)
@@ -270,7 +277,6 @@
                             "                 </li>\n" +
                             "\n" +
                             "                <li class=\"option\">\n" +
-
                             "\n" +
                             "\n" +
                             "                    <label for=\"0_answer_" + c + "_option_4\">\n" +
@@ -279,11 +285,14 @@
                             "                    </label>\n" +
                             "                 </li>\n" +
                             "\n" +
-                            "                 <li>" +
+                            "                <li class=\"option\">\n" +
                             "\n" +
-                            "                      得分：\n" +
-                            "                      <input type='text' name='score'>" +
-                            "                 </li>" +
+                            "\n" +
+                            "                    <label for=\"0_answer_" + a + "_option_4\">\n" +
+                            "                        分值：\n" +
+                            "                       <p class=\"ue\" style=\"display: inline;\">" + data[i].score + "</p>\n" +
+                            "                    </label>\n" +
+                            "                 </li>\n" +
                             "\n" +
                             "         </ul>\n" +
                             "     </div>\n" +
@@ -291,9 +300,9 @@
                         )
 
 
-                         $('input[type="radio"]:checked').val();
+                        $('input[type="radio"]:checked').val();
 
-                         //$("input[type='radio']").val(data[i].answer).prop("checked", "true");
+                        //$("input[type='radio']").val(data[i].answer).prop("checked", "true");
 
                         $("input:radio[value='"+data[i].answer+"']").attr("checked","true");
                         console.log(data[i].answer)
@@ -378,11 +387,14 @@
                             "                    </label>\n" +
                             "                 </li>\n" +
                             "\n" +
-                            "                 <li>" +
+                            "                <li class=\"option\">\n" +
                             "\n" +
-                            "                      得分：\n" +
-                            "                      <input type='text' name='score'>" +
-                            "                 </li>" +
+                            "\n" +
+                            "                    <label for=\"0_answer_" + a + "_option_4\">\n" +
+                            "                        分值：\n" +
+                            "                       <p class=\"ue\" style=\"display: inline;\">" + data[i].score + "</p>\n" +
+                            "                    </label>\n" +
+                            "                 </li>\n" +
                             "\n" +
                             "                                        </ul>\n" +
                             "                                    </div>\n" +
@@ -395,10 +407,10 @@
                         var check = data[i].answer;
                         console.log(check);
                         var box = check.split(",");
-                          $("input[type=checkbox]").each(function () {
-                              $(this).prop("checked",true);
+                        $("input[type=checkbox]").each(function () {
+                            $(this).prop("checked",true);
 
-                          })
+                        })
 
 
 
@@ -423,27 +435,7 @@
                             "                       <p class=\"ue\" style=\"display: inline;\">" + data[i].answer + "</p>\n" +
                             "                    </label>\n" +
                             "                 </li>\n" +
-                           /* "                                            <li class=\"option\">\n" +
-                            "\n" +
-                              "                                                <input type=\"radio\" class=\"radioOrCheck\" name=\"answer"+p+"\"\n" +
-                              "                                                       id=\"2_answer_"+p+"_option_1\" />\n" +
-                            "\n" +
-                            "\n" +
-                            "                                                <label for=\"2_answer_" + p + "_option_1\">\n" +
-                            "                                                   正确\n" +
-                            "                                                </label>\n" +
-                            "                                            </li>\n" +
-                            "\n" +*/
-                            /*"                                            <li class=\"option\">\n" +
-                            "\n" +
-                            "                                                <input type=\"radio\" class=\"radioOrCheck\" name=\"answer"+p+"\"\n" +
-                            "                                                       id=\"2_answer_"+p+"_option_2\" />\n" +
-                            "\n" +
-                            "\n" +
-                            "                                                <label for=\"2_answer_" + p + "_option_2\">\n" +
-                            "                                                    错误\n" +
-                            "                                                </label>\n" +
-                            "                                            </li>\n" +*/
+
                             "\n" +
                             "                <li class=\"option\">\n" +
 
@@ -465,11 +457,15 @@
                             "                    </label>\n" +
                             "                 </li>\n" +
                             "\n" +
-                            "                 <li>" +
+                            "                <li class=\"option\">\n" +
+
                             "\n" +
-                            "                      得分：\n" +
-                            "                     <input type='text' name='score'>" +
-                            "                 </li>" +
+                            "\n" +
+                            "                    <label for=\"0_answer_" + a + "_option_4\">\n" +
+                            "                        分值：\n" +
+                            "                       <p class=\"ue\" style=\"display: inline;\">" + data[i].score + "</p>\n" +
+                            "                    </label>\n" +
+                            "                 </li>\n" +
                             "\n" +
                             "                                           \n" +
                             "                                        </ul>\n" +
@@ -526,11 +522,15 @@
                             "                    </label>\n" +
                             "                 </li>\n" +
                             "\n" +
-                            "                 <li>" +
+                            "                <li class=\"option\">\n" +
+
                             "\n" +
-                            "                      得分：\n" +
-                            "                      <input type='text' name='score'>" +
-                            "                 </li>" +
+                            "\n" +
+                            "                    <label for=\"0_answer_" + a + "_option_4\">\n" +
+                            "                        分值：\n" +
+                            "                       <p class=\"ue\" style=\"display: inline;\">" + data[i].score + "</p>\n" +
+                            "                    </label>\n" +
+                            "                 </li>\n" +
                             "\n" +
                             "                                        </ul>\n" +
 
@@ -588,11 +588,15 @@
                             "                    </label>\n" +
                             "                 </li>\n" +
                             "\n" +
-                            "                 <li>" +
+                            "                <li class=\"option\">\n" +
+
                             "\n" +
-                            "                      得分：\n" +
-                            "                      <input type='text' name='score' id=''>" +
-                            "                 </li>" +
+                            "\n" +
+                            "                    <label for=\"0_answer_" + a + "_option_4\">\n" +
+                            "                        分值：\n" +
+                            "                       <p class=\"ue\" style=\"display: inline;\">" + data[i].score + "</p>\n" +
+                            "                    </label>\n" +
+                            "                 </li>\n" +
                             "\n" +
                             "                                        </ul>\n" +
 
@@ -602,47 +606,6 @@
                     }
 
 
-
-                    $("#finish").click(function (score) {
-                        //var score = $("input[name='score']").length();
-
-                        var code = new Array();
-                        $("input[name='score']").each(function () {
-                            code.push($(this).val());
-
-                        })
-
-                        var list = new Array();
-                        for (var m=0;m<code.length;m++){
-                            if (code[m]!=""){
-                                var prize={}
-                                prize.score=code[m];
-
-                                list.push(prize);
-                            }
-                        }
-                        //数组转为json格式
-                        var plist = JSON.stringify(list);
-                        console.log(plist)
-                        $.ajax({
-                            type:'post',
-                            url:"/mark/addScore",
-                            dataType:"json",
-                            data:{"plist":"plist"},
-                            processData: false,// true  ajax 提交的时候不会序列化 data，而是直接使用data
-                            contentType: false,
-                            success:function (data) {
-                                if (data){
-                                    layer.msg('批改完成');
-                                }else {
-                                    alert("failed")
-                                }
-                            },
-                            error:function (data) {
-                                alert("Error")
-                            }
-                        })
-                    })
                 }
 
             }
@@ -652,50 +615,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-    /*function pigaiFinish() {
-        //var data = $("input[name='score']").val();
-        var data = new FormData($("#userpaperForm")[0]);
-        console.log(data)
-        $.ajax({
-            type:'post',
-            url:"/mark/addScore",
-            dataType:"json",
-            data:$('#userpaperForm').serialize(),
-            processData: false,// true  ajax 提交的时候不会序列化 data，而是直接使用data
-            contentType: false,
-            success:function (data) {
-                if (data){
-                    alert("success")
-                    subtable(json)
-                }else {
-                    alert("failed")
-                }
-            },
-            error:function (data) {
-                alert("Error")
-            }
-        })
-
-    }*/
 
 </script>
 </html>

@@ -27,7 +27,7 @@
 
 
 
-<div style="margin-left: 850px">
+<%--<div style="margin-left: 850px">
     <button class="layui-btn" style="
            border: none;
             color: white;
@@ -36,7 +36,7 @@
             display: inline-block;
             font-size: 16px;" lay-filter="releaseGrade" id="releaseGrade" >发布成绩
     </button>
-</div>
+</div>--%>
 
 <div style="margin-left: 50px">
     <table id="shijuan_tab" lay-filter="shijuan_tab" style="width: 950px"></table>
@@ -150,7 +150,6 @@
                     ,{field: 'testPaperEndTime', title: '结束时间', width:150}
                     ,{field: 'testPaperFullMark', title: '总分', width:150}
                     ,{field: 'testPaperPassMark', title: '及格分', width:150}
-                    //,{title: '操作', width: 300 ,toolbar: '#testCenter_demo'}
                 ]]
 
             });
@@ -176,7 +175,7 @@
                         }}
                     ,{title: '操作', field:'id', width: 300 ,templet:function (d) {
                             if (d.estimateStatus=="1"){
-                                return "<a style='color: #9F9F9F'>去判卷</a>";
+                                return "<a style='color: #1E9FFF' href="+'/jsps/markPapers/showPaper.jsp?id='+d.userId+">查看试卷</a>";
                             }else if (d.estimateStatus=="0"){
                                 console.log(d.userId)
                                 return "<a style='color: #1E9FFF' href="+'/jsps/markPapers/goGradepapers.jsp?id='+d.userId+">去判卷</a>"
